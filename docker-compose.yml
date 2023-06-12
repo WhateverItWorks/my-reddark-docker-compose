@@ -6,7 +6,6 @@ services:
     hostname: 'reddark'
     user: 65534:65534
     read_only: true
-    #image: ghcr.io/Tanza3D/reddark:latest
     build:
       context: .
       dockerfile: Dockerfile
