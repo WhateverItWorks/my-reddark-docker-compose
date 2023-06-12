@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  reddark:
+    container_name: 'reddark'
+    hostname: 'reddark'
+    user: 65534:65534
+    read_only: true
+    #image: ghcr.io/Tanza3D/reddark:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '127.0.0.1:8088:8080'
+    restart: 'always'
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    networks:
+     - reddark
+networks:
+  reddark:
