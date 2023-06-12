@@ -9,7 +9,7 @@ var { exec } = require('child_process');
 
 const io = new Server(server, {
     cors: {
-        origin: "https://reddark.untone.uk/",
+        origin: process.env.ORIGIN,
         methods: ["GET", "POST"],
         transports: ['websocket'],
         credentials: true
