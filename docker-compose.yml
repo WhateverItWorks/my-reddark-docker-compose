@@ -12,7 +12,7 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     ports:
-      - '127.0.0.1:8312:8312'
+      - '127.0.0.1:8312:3212'
     restart: 'always'
     security_opt:
       - no-new-privileges:true
